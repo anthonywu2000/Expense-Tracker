@@ -1,13 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
+import uuid from "react-uuid";
 
 export const AddTransaction = () => {
     const [text, setText] = useState("");
     const [amount, setAmount] = useState(0);
+    const context = useContext(GlobalContext);
+
+    const onSubmit = () => {
+        // e.preventDefault();
+
+       const newTransaction = {
+           id: uuid(),
+           text,
+           amount: +amount
+       }
+
+       if (newTransaction.amount === 0 || newTransaction.text === "") {
+           alert("INVALID INPUTS. PLEASE CHECK AGAIN");
+       } else {
+           context.addTransaction(newTransaction);
+       }
+    }
 
     return (
         <div>
             <h3>Add New Transaction</h3>
-            <form>
+            <form onSubmit = {onSubmit}> {/*The effect of the submission*/}
                 <div className = "form-control">
                     <label>Transaction Name</label>
                     <input type = "text" value = {text} onChange = {(e) => setText(e.target.value)}
