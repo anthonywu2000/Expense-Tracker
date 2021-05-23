@@ -3,12 +3,7 @@ import Reducer from './Reducer';
 
 // Initial state
 const initialState = {
-    transactions: [
-        { id: 1, text: 'Flower', amount: -20 },
-        { id: 2, text: 'Toy Car', amount: 30 },
-        { id: 3, text: 'Debussy Images Book', amount: 700 },
-        { id: 4, text: 'Orange Juice', amount: -19.99 }
-    ]
+    transactions: [] // initially, an empty transaction List
 }
 
 // Create context

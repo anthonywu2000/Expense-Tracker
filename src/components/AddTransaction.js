@@ -7,8 +7,8 @@ export const AddTransaction = () => {
     const [amount, setAmount] = useState(0);
     const context = useContext(GlobalContext);
 
-    const onSubmit = () => {
-        // e.preventDefault();
+    const onSubmit = (e) => {
+        e.preventDefault();
 
        const newTransaction = {
            id: uuid(),
@@ -20,6 +20,8 @@ export const AddTransaction = () => {
            alert("INVALID INPUTS. PLEASE CHECK AGAIN");
        } else {
            context.addTransaction(newTransaction);
+           setText("");
+           setAmount(0);
        }
     }
 
