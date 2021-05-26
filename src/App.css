@@ -9,7 +9,8 @@
 }
 
 body {
-    background-color: #f28500;
+    background-image: url("http://i.stack.imgur.com/spmUM.gif");
+    background-blend-mode: screen;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,21 +28,30 @@ body {
 h1 {
     letter-spacing: 1px;
     margin: 0;
+    color: white;
 }
 
 h3 {
     border-bottom: 1px solid #bbb;
     padding-bottom: 10px;
     margin: 40px 0 10px;
+    color: white;
 }
 
 h4 {
     margin: 0;
     text-transform: uppercase;
+    color: white;
 }
 
 .header {
     text-decoration: underline;
+    color: white;
+}
+
+.income-exp-inner {
+    text-decoration: underline;
+    color: black;
 }
 
 .inc-exp-container {
@@ -93,7 +103,7 @@ input[type='number'] {
 
 .btn {
     cursor: pointer;
-    background-color: dodgerblue;
+    background-color: hotpink;
     box-shadow: var(--box-shadow);
     color: #fff;
     border: 0;
@@ -107,6 +117,10 @@ input[type='number'] {
 .btn:focus,
 .delete-btn:focus {
     outline: 0;
+}
+
+.form-control {
+    color: white;
 }
 
 .list {
@@ -135,11 +149,11 @@ input[type='number'] {
 }
 
 .list li.plus:hover {
-    box-shadow: 0 0 11px rebeccapurple;
+    box-shadow: 0 0 11px whitesmoke;
 }
 
 .list li.minus:hover {
-    box-shadow: 0 0 11px rebeccapurple;
+    box-shadow: 0 0 11px whitesmoke;
 }
 
 .delete-btn {

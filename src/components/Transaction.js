@@ -8,6 +8,7 @@ export const Transaction = ({ transaction }) => {
         <li className = {transaction.amount < 0 ? 'minus' : 'plus'}>
             {transaction ? transaction.text : ""}
             <span>{sign}${Math.abs(transaction.amount)}</span>
+            <small>Added on {transaction.date}</small>
             <button onClick = {() => context.deleteTransaction(transaction.id)} className = "delete-btn">x</button>
         </li>
     )

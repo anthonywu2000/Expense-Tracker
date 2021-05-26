@@ -13,11 +13,16 @@ export const AddTransaction = () => {
        const newTransaction = {
            id: uuid(),
            text,
+           date: new Date().toLocaleDateString("en-US", {
+               year: "numeric",
+               month: "numeric",
+               day: "numeric",
+           }),
            amount: +amount
        }
 
        if (newTransaction.amount === 0 || newTransaction.text === "") {
-           alert("INVALID INPUTS. PLEASE CHECK AGAIN");
+           alert("INVALID INPUTS. PLEASE CHECK AGAIN.");
        } else {
            context.addTransaction(newTransaction);
            setText("");

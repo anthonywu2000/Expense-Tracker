@@ -13,12 +13,12 @@ export const IncomeExpenses = () => {
     return (
         <div className = "inc-exp-container">
             <div>
-                <h4 className = "header">Income</h4>
+                <h4 className = "income-exp-inner">Income</h4>
                 <p className = "money plus">${income.toFixed(2)}</p>
             </div>
 
             <div>
-                <h4 className = "header">Expense</h4>
+                <h4 className = "income-exp-inner">Expense</h4>
                 <p className = "money minus">${expense.toFixed(2)}</p>
             </div>
         </div>
