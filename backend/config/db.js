@@ -13,3 +13,5 @@ const connectDB = async () => {
 }
 
 module.exports = { connectDB };
+
+// 28:30

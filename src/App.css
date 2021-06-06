@@ -55,7 +55,7 @@ h4 {
 }
 
 .inc-exp-container {
-    background-color: antiquewhite;
+    background-color: #faebd7;
     box-shadow: var(--box-shadow);
     padding: 20px;
     display: flex;

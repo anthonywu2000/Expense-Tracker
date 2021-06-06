@@ -10,7 +10,6 @@ import { GlobalProvider } from "./context/GlobalState";
 const App = () => {
   return (
     <GlobalProvider>
-      <div />
       <div className = "container">
           <Header />
           <Balance />
