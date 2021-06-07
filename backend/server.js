@@ -12,6 +12,9 @@ const trans = require("./routes/transactions");
 
 const app = express();
 
+// req.body parser middleware
+app.use(express.json());
+
 // pivotal for API requests
 app.use("/api/v1/transactions", trans);
 
