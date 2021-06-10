@@ -1,7 +1,6 @@
 const express = require("express");
 const dotenv = require('dotenv');
-const colors = require("colors");
-const morgan = require("morgan");
+require('colors');
 const { connectDB } = require("./config/db");
 
 dotenv.config({ path: './config/config.env' }); // call the objects in config file process.env.VARIABLE_NAME

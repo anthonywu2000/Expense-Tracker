@@ -13,11 +13,11 @@ export const AddTransaction = () => {
        const newTransaction = {
            id: uuid(),
            text,
-           date: new Date().toLocaleDateString("en-US", {
-               year: "numeric",
-               month: "numeric",
-               day: "numeric",
-           }),
+           // date: new Date().toLocaleDateString("en-US", {
+           //     year: "numeric",
+           //     month: "numeric",
+           //     day: "numeric",
+           // }),
            amount: +amount
        }
 
