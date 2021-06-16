@@ -12,9 +12,10 @@ const transactionSchema = new Schema({
         type: Number,
         required: true,
     },
-    dateAdded: {
-        type: Date,
-        default: Date.now,
+    date: {
+        type: String,
+        trim: true,
+        required: true,
     },
 });
 

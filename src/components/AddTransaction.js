@@ -5,6 +5,7 @@ import uuid from "react-uuid";
 export const AddTransaction = () => {
     const [text, setText] = useState("");
     const [amount, setAmount] = useState(0);
+    const [date, setDate] = useState("");
     const context = useContext(GlobalContext);
 
     const onSubmit = (e) => {
@@ -13,11 +14,7 @@ export const AddTransaction = () => {
        const newTransaction = {
            id: uuid(),
            text,
-           // date: new Date().toLocaleDateString("en-US", {
-           //     year: "numeric",
-           //     month: "numeric",
-           //     day: "numeric",
-           // }),
+           date,
            amount: +amount
        }
 
@@ -27,6 +24,7 @@ export const AddTransaction = () => {
            context.addTransaction(newTransaction);
            setText("");
            setAmount(0);
+           setDate("");
        }
     }
 
@@ -41,8 +39,13 @@ export const AddTransaction = () => {
                 </div>
 
                 <div className = "form-control">
-                    <label>Transaction Amount<br/>
-                        <small>(Enter negative sign (-) for expenses, enter positive sign (+) for incomes)</small>
+                    <label>Transaction Date</label>
+                    <input type = "date" value = {date} onChange = {(e) => setDate(e.target.value)} />
+                </div>
+
+                <div className = "form-control">
+                    <label>Transaction Amount
+                        (Note: Enter negative sign (-) for expenses.)
                     </label>
                     <input type = "number" value = {amount} onChange = {(e) => setAmount(e.target.value)}
                            placeholder = "Enter transaction amount...." />

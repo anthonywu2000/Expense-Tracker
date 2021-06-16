@@ -123,6 +123,14 @@ input[type='number'] {
     color: white;
 }
 
+label {
+    display: flex;
+    text-align: left;
+    width: 400px;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+
 .list {
     list-style-type: none;
     padding: 0;
